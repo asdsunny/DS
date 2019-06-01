@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class MyList <E> {
 	
@@ -30,6 +31,10 @@ public class MyList <E> {
 	
 	// 在index索引的位置插入一个新元素e
 	public void insert(int index,E e) {
+		//动态扩容
+		if (size==data.length) {
+			reSize(2*getCapacity());
+		}
 		
 		for(int i=size-1;i>=index;i--) {
 			data[i+1]=data[i];
@@ -41,6 +46,11 @@ public class MyList <E> {
 	
 	//添加元素
 	public void add(E e) {
+		//动态扩容
+		if (size==data.length) {
+			reSize(2*getCapacity());
+		}
+		
 		data[size]=e;
 		size++;
 	}
@@ -74,11 +84,21 @@ public class MyList <E> {
 		}
 	}
 	
+	public void reSize(int newCapacity) {
+		E [] newdata = (E[])new Object[newCapacity];
+		System.arraycopy(data, 0, newdata, 0, data.length);
+		data=newdata;
+	}
+	
 	public static void main(String[] args) {
 		MyList list=new MyList<Integer>();
-		int [] arr=new int[] {1,2,9};
-		for (int i : arr) {
-			list.add(i);
+		ArrayList<Integer> list2 = new ArrayList<Integer>();
+		for(int i=0;i<=5;i++) {
+			list2.add(i);
+		}
+//		int [] arr=new int[] {1,2,9};
+		for (Integer e : list2) {
+			list.add(e);
 		}
 		System.out.println(list.res());
 		list.insert(3, -1);
