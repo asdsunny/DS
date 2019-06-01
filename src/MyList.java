@@ -101,6 +101,8 @@ public class MyList <E> {
 			list.add(e);
 		}
 		System.out.println(list.res());
+		list.insert(0, -1);
+		System.out.println(list.res());
 		list.insert(3, -1);
 		System.out.println(list.res());
 
