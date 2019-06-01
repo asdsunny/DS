@@ -1,5 +1,13 @@
 
 public class MyLinkList <E>{
+	private class Node{
+		E e;
+		Node next;
+		
+		public Node() {
+			
+		}
+	}
 	public int size;
 	public Node head;
 	
@@ -8,15 +16,6 @@ public class MyLinkList <E>{
 	}
 	public boolean isEmpty() {
 		return size==0;
-	}
-	
-	private class Node{
-		E e;
-		Node next;
-		
-		public Node() {
-			
-		}
 	}
 
 }
