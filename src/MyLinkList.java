@@ -90,6 +90,22 @@ public class MyLinkList <E>{
 		size--;
 	}
 	
+	//删除所有的同一个元素
+	public void delAllEle(E e) {
+		while (head.e.equals(e)) {
+			head=head.next;
+		}
+		Node pre=head;
+		while (pre.next!=null) {
+			if (pre.next.e.equals(e)) {
+				Node del=pre.next;
+				pre.next=del.next;
+				del.next=null;
+			}
+			pre=pre.next;
+		}	
+	}
+	
 	public String res() {
 		StringBuilder sb = new StringBuilder();
 		Node pre=head;
@@ -107,9 +123,14 @@ public class MyLinkList <E>{
 			list.addFirst(i);
 		}
 		System.out.println(list.res());
-//		list.insert(1, -1);
+		list.insert(1, -1);
+		list.insert(5, -1);
+		list.insert(0, -1);
+		list.insert(8, -1);
 //		list.del(9);
-		list.delByEle(6);
+//		list.delByEle(6);
+		System.out.println(list.res());
+		list.delAllEle(-1);
 		System.out.println(list.res());
 	}
 
