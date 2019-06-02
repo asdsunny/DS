@@ -1,4 +1,5 @@
-import javax.xml.soap.Node;
+
+
 
 public class DoubleList <E>{
 	
@@ -134,7 +135,7 @@ public class DoubleList <E>{
 	
 	
 	/**
-	 * //双链表应该通过直接查找元素 这个方法太麻烦
+	 * //双链表应该通过直接查找元素 这个方法太麻烦 不要了
 	 * @param e
 	 */
 	public void delByEle(E e) {
@@ -171,7 +172,11 @@ public class DoubleList <E>{
 		}
 	}
 	
-	
+	/**
+	 * getIndexByEle
+	 * @param e
+	 * @return
+	 */
 	public int getIndexByEleB(E e) {
 		Node cur=head;
 		for(int i=0;i<size-1;i++) {
@@ -182,6 +187,11 @@ public class DoubleList <E>{
 		return -1;
 	}
 	
+	/**
+	 * getIndexByEle
+	 * @param e
+	 * @return
+	 */
 	public int getIndexByEleG(E e) {
 		Node current = head;
 		for(int i=0;i<size && current!=null;i++,current=current.next) {
@@ -192,6 +202,10 @@ public class DoubleList <E>{
 		return -1;
 	}
 	
+	/**
+	 * 删除Node node入参
+	 * @param node
+	 */
 	public void delNode(Node node) {
 		Node preNode=node.pre;
 		Node nextNode=node.next;
@@ -259,6 +273,7 @@ public class DoubleList <E>{
 		System.out.println(list.resByHead());
 		list.delNode(list.getNodeByIndex(5));
 		System.out.println(list.resByHead());
+		
 
 }
 	}
