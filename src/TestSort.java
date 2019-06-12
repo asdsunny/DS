@@ -9,6 +9,7 @@ public class TestSort {
 //		int[] sort = DubboSort.sort(arr);
 		int[] sort = SelectSort.sort(arr);
 		int[] sort2 = InsertSort.sort(arr);
+		System.out.println("123123");
 		for (int i : sort) {
 			System.out.print(i+",");
 		}
