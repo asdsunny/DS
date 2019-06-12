@@ -9,8 +9,9 @@ public class TestSort {
 //		int[] sort = DubboSort.sort(arr);
 		int[] sort = SelectSort.sort(arr);
 		System.out.println("1111111");
+		System.out.println("456465");
+		System.out.println("6666");
 		System.out.println("999999");
-
 		int[] sort2 = InsertSort.sort(arr);
 
 		System.out.println("123123");
