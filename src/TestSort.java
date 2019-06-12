@@ -8,6 +8,9 @@ public class TestSort {
 		System.out.println(" ");
 //		int[] sort = DubboSort.sort(arr);
 		int[] sort = SelectSort.sort(arr);
+
+		int[] sort2 = InsertSort.sort(arr);
+
 		for (int i : sort) {
 			System.out.print(i+",");
 		}
