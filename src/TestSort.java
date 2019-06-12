@@ -11,6 +11,8 @@ public class TestSort {
 		System.out.println("456465");
 		int[] sort2 = InsertSort.sort(arr);
 
+		System.out.println("123123");
+
 		for (int i : sort) {
 			System.out.print(i+",");
 		}
